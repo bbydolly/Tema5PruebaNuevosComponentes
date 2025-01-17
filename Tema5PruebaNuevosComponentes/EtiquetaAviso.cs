@@ -40,6 +40,7 @@ namespace Tema5PruebaNuevosComponentes
         [Description("Indica el tipo de marca que aparece junto al texto")]
         public EMarca Marca
         {
+
             set
             {
                 marca = value;
