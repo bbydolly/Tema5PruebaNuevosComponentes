@@ -106,16 +106,16 @@ namespace Tema5PruebaNuevosComponentes
                     txt.Location = new Point(lbl.Width + Separacion, 0);
                     //Establecemos ancho del Textbox
                     //(la label tiene ancho por autosize)
-                  //  txt.Width = this.Width - lbl.Width - Separacion;
+                    //  txt.Width = this.Width - lbl.Width - Separacion;
                     //Establecemos altura del componente
-                    this.Width=txt.Width+lbl.Width+Separacion;
+                    this.Width = txt.Width + lbl.Width + Separacion;
                     this.Height = Math.Max(txt.Height, lbl.Height);
                     break;
                 case EPosicion.DERECHA:
                     //Establecemos posición del componente txt
                     txt.Location = new Point(0, 0);
                     //Establecemos ancho del Textbox
-                   // txt.Width = this.Width - lbl.Width - Separacion;
+                    // txt.Width = this.Width - lbl.Width - Separacion;
                     //Establecemos posición del componente lbl
                     lbl.Location = new Point(txt.Width + Separacion, 0);
                     this.Width = txt.Width + lbl.Width + Separacion;
@@ -208,7 +208,7 @@ namespace Tema5PruebaNuevosComponentes
         {
             set
             {
-                txt.PasswordChar=value;
+                txt.PasswordChar = value;
             }
             get
             {
@@ -331,5 +331,50 @@ namespace Tema5PruebaNuevosComponentes
         }
 
 
+
+        //Ejercicio 2
+        [Category("La propiedad cambió")]
+        [Description("Se lanza cuando ")]
+
+        private bool subrayada;
+
+        public bool Subrayada
+        {
+            set
+            {
+                subrayada = value;
+                // dibujarSubrayado();
+            }
+            get
+            {
+                return subrayada;
+            }
+        }
+
+        //La clase userControl no pone por defecto el OnPaint pero se lo añado 
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            Graphics g = e.Graphics;
+
+            if (Subrayada)
+            {
+
+                //Esta propiedad provoca mejoras en la apariencia o en la eficiencia
+                // a la hora de dibujar
+                g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+              
+                Pen lapiz = new Pen(Color.Red, 1);
+                //Cordenadas punto de origen y punto final 
+                //  g.DrawLine(lapiz, lbl.Location.X, lbl.Location.Y    +    lbl.Height+5, lbl.Location.X + lbl.Height + 5, lbl.Width);
+                g.DrawLine(lapiz, lbl.Location.X, lbl.Location.Y + lbl.Height + 5,
+                    lbl.Location.X+lbl.Width, lbl.Location.Y + lbl.Height + 5); //Y es constante y x varía
+                lapiz.Dispose();
+                
+
+            }
+        }
+
+       
     }
 }

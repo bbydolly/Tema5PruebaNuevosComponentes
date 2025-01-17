@@ -61,6 +61,7 @@
             this.Name = "LabelTextBox";
             this.Size = new System.Drawing.Size(293, 113);
             this.SizeChanged += new System.EventHandler(this.LabelTextBox_SizeChanged);
+          
             this.ResumeLayout(false);
             this.PerformLayout();
 

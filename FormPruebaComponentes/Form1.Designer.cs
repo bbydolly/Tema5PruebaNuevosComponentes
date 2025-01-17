@@ -30,8 +30,8 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.labelTextBox1 = new Tema5PruebaNuevosComponentes.LabelTextBox();
             this.etiquetaAviso1 = new Tema5PruebaNuevosComponentes.EtiquetaAviso();
+            this.labelTextBox1 = new Tema5PruebaNuevosComponentes.LabelTextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -54,23 +54,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // labelTextBox1
-            // 
-            this.labelTextBox1.Location = new System.Drawing.Point(28, 41);
-            this.labelTextBox1.Name = "labelTextBox1";
-            this.labelTextBox1.Posicion = Tema5PruebaNuevosComponentes.LabelTextBox.EPosicion.IZQUIERDA;
-            this.labelTextBox1.PswChr = 'u';
-            this.labelTextBox1.Separacion = 0;
-            this.labelTextBox1.Size = new System.Drawing.Size(135, 20);
-            this.labelTextBox1.TabIndex = 0;
-            this.labelTextBox1.TextLbl = "label1";
-            this.labelTextBox1.TextTxt = "";
-            this.labelTextBox1.PosicionChanged += new System.EventHandler(this.labelTextBox1_PosicionChanged);
-            this.labelTextBox1.TxtChange += new System.EventHandler(this.labelTextBox1_TxtChange_1);
-            this.labelTextBox1.SeparacionChanged += new System.EventHandler(this.labelTextBox1_SeparacionChanged_1);
-            this.labelTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.labelTextBox1_KeyPress);
-            this.labelTextBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.labelTextBox1_KeyUp);
-            // 
             // etiquetaAviso1
             // 
             this.etiquetaAviso1.Location = new System.Drawing.Point(43, 135);
@@ -79,6 +62,24 @@
             this.etiquetaAviso1.Size = new System.Drawing.Size(97, 15);
             this.etiquetaAviso1.TabIndex = 3;
             this.etiquetaAviso1.Text = "etiquetaAviso1";
+            // 
+            // labelTextBox1
+            // 
+            this.labelTextBox1.Location = new System.Drawing.Point(28, 41);
+            this.labelTextBox1.Name = "labelTextBox1";
+            this.labelTextBox1.Posicion = Tema5PruebaNuevosComponentes.LabelTextBox.EPosicion.IZQUIERDA;
+            this.labelTextBox1.PswChr = 'u';
+            this.labelTextBox1.Separacion = 0;
+            this.labelTextBox1.Size = new System.Drawing.Size(135, 20);
+            this.labelTextBox1.Subrayada = true;
+            this.labelTextBox1.TabIndex = 0;
+            this.labelTextBox1.TextLbl = "label1";
+            this.labelTextBox1.TextTxt = "";
+            this.labelTextBox1.PosicionChanged += new System.EventHandler(this.labelTextBox1_PosicionChanged);
+            this.labelTextBox1.TxtChange += new System.EventHandler(this.labelTextBox1_TxtChange_1);
+            this.labelTextBox1.SeparacionChanged += new System.EventHandler(this.labelTextBox1_SeparacionChanged_1);
+            this.labelTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.labelTextBox1_KeyPress);
+            this.labelTextBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.labelTextBox1_KeyUp);
             // 
             // Form1
             // 
