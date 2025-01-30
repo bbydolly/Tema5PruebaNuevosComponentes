@@ -15,7 +15,9 @@ namespace FormPruebaComponentes
 
     //Si el set está mal puede saltar stackOverFlow (Llamada recursiva)
     //, editar la clase con 
-    //Para pruebas 
+    
+
+    //agregar >Control personalizado
     public partial class Form1 : Form
     {
         public Form1()

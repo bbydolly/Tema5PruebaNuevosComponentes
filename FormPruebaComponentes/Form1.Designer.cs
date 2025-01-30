@@ -91,7 +91,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.labelTextBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Practica guiada Dibujo GDI y clase Control";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.ResumeLayout(false);
 

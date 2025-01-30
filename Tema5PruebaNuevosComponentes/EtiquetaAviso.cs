@@ -44,6 +44,7 @@ namespace Tema5PruebaNuevosComponentes
             set
             {
                 marca = value;
+                //Para actualizar la propiedad en la ventana
                 this.Refresh();
             }
             get
