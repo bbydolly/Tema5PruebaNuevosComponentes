@@ -94,5 +94,12 @@ namespace FormPruebaComponentes
             //No se recomìla
 
         }
+
+        
+
+        private void etiquetaAviso6_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }

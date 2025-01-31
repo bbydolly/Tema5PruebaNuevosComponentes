@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tema5PruebaNuevosComponentes", "Tema5PruebaNuevosComponentes\Tema5PruebaNuevosComponentes.csproj", "{1B8FE7AD-4DA6-4012-A03B-7F700FA6C8BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tema5_Ejs_1_2_practica_guiada", "Tema5PruebaNuevosComponentes\Tema5_Ejs_1_2_practica_guiada.csproj", "{1B8FE7AD-4DA6-4012-A03B-7F700FA6C8BE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormPruebaComponentes", "FormPruebaComponentes\FormPruebaComponentes.csproj", "{B919D39C-B32C-435A-8208-B12A320BD47F}"
 EndProject

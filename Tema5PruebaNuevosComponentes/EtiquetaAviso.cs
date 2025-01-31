@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,7 +70,11 @@ namespace Tema5PruebaNuevosComponentes
         {
             set
             {
+
                 imagenMarca = value;
+                this.Refresh();//Para refrescar la imagen y tengo que ponerle un if porque si no siempre se va ahacer el refresh
+
+
             }
             get
             {
@@ -96,7 +102,7 @@ namespace Tema5PruebaNuevosComponentes
         }
 
 
-
+        private int anchoX;
 
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -159,30 +165,69 @@ namespace Tema5PruebaNuevosComponentes
                     //pueden realizar muchos y cogen memoria
                     lapiz.Dispose();
                     break;
-                case EMarca.Imagen:
+                case EMarca.Nada:
+                    break;
 
-                    ImagenMarca(new Bitmap("C:\\Users\\Cris\\Desktop\\MuchasFotos\\f1.jpg"));
-                    g.DrawImage(new Bitmap("C:\\Users\\Cris\\Desktop\\MuchasFotos\\f1.jpg"), 0, 0, h, h);
-                    offsetX = h; //Cuanto se desplazan las letras en el eje x
+                case EMarca.Imagen:
+                    //Comprobar que el archivo existe
+                    if (ImagenMarca != null) //Si el diseñador no puede asignar la imagen no da excepcion
+                    {
+                        g.DrawImage(ImagenMarca, 0, 0, h, h);
+                        offsetX = h; //Cuanto se desplazan las letras en el eje x
+                                     //Es una propiedad que voy a coger del apartado propiedades
+
+                    }
+                    else
+                    {
+                        goto case EMarca.Nada;
+                    }
+
                     break;
 
             }
 
-
-
-
-
-
+            anchoX = offsetX;
 
             //3.Pinto texto
             //Finalmente pintamos el Texto; desplazado si fuera necesario
             SolidBrush b = new SolidBrush(this.ForeColor);
+
 
             g.DrawString(this.Text, this.Font, b, offsetX + grosor, offsetY);
             Size tam = g.MeasureString(this.Text, this.Font).ToSize();
             this.Size = new Size(tam.Width + offsetX + grosor, tam.Height + offsetY * 2);
             b.Dispose();
         }
+
+
+
+        //Declaración del evento
+        [Category("Mis eventos")]
+        [Description("Se lanza cuando se realiza click sobre la marca")]
+        public event EventHandler ClickEnMarca;
+
+        //Funcion asociada al evento que debe de cumplir el delegado
+        //Una funcion para cumplir el delegado event handler debe cumplir el delegado ,debe ser void con parámetro eventargs
+        public void OnClickEnMarca(EventArgs e)//Void con parámetro eventArgs
+        {
+            ClickEnMarca?.Invoke(this, e);//e
+            
+        }
+
+
+        //El formulario ya está configurado para detectar el mouseClick 
+        //Sobreescribo el método existente  /override y se autocompleta
+        protected override void OnMouseClick(MouseEventArgs e)
+        {
+            base.OnMouseClick(e);
+            if (e.Location.X <= anchoX)
+            {
+                OnClickEnMarca(EventArgs.Empty);
+
+            }
+           
+        }
+
 
     }
 }

@@ -28,16 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.etiquetaAviso6 = new Tema5PruebaNuevosComponentes.EtiquetaAviso();
+            this.etiquetaAviso5 = new Tema5PruebaNuevosComponentes.EtiquetaAviso();
             this.etiquetaAviso4 = new Tema5PruebaNuevosComponentes.EtiquetaAviso();
             this.etiquetaAviso3 = new Tema5PruebaNuevosComponentes.EtiquetaAviso();
             this.etiquetaAviso2 = new Tema5PruebaNuevosComponentes.EtiquetaAviso();
             this.etiquetaAviso1 = new Tema5PruebaNuevosComponentes.EtiquetaAviso();
             this.labelTextBox1 = new Tema5PruebaNuevosComponentes.LabelTextBox();
-            this.etiquetaAviso5 = new Tema5PruebaNuevosComponentes.EtiquetaAviso();
             this.SuspendLayout();
             // 
             // button1
@@ -78,9 +80,32 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Ejercicio 2:";
             // 
+            // etiquetaAviso6
+            // 
+            this.etiquetaAviso6.Gradiente = false;
+            this.etiquetaAviso6.ImagenMarca = null;
+            this.etiquetaAviso6.Location = new System.Drawing.Point(45, 338);
+            this.etiquetaAviso6.Marca = Tema5PruebaNuevosComponentes.EMarca.Circulo;
+            this.etiquetaAviso6.Name = "etiquetaAviso6";
+            this.etiquetaAviso6.Size = new System.Drawing.Size(131, 53);
+            this.etiquetaAviso6.TabIndex = 10;
+            this.etiquetaAviso6.Text = "etiquetaAviso6";
+            // 
+            // etiquetaAviso5
+            // 
+            this.etiquetaAviso5.Gradiente = false;
+            this.etiquetaAviso5.ImagenMarca = ((System.Drawing.Bitmap)(resources.GetObject("etiquetaAviso5.ImagenMarca")));
+            this.etiquetaAviso5.Location = new System.Drawing.Point(45, 304);
+            this.etiquetaAviso5.Marca = Tema5PruebaNuevosComponentes.EMarca.Imagen;
+            this.etiquetaAviso5.Name = "etiquetaAviso5";
+            this.etiquetaAviso5.Size = new System.Drawing.Size(91, 13);
+            this.etiquetaAviso5.TabIndex = 9;
+            this.etiquetaAviso5.Text = "etiquetaAviso5";
+            // 
             // etiquetaAviso4
             // 
             this.etiquetaAviso4.Gradiente = false;
+            this.etiquetaAviso4.ImagenMarca = null;
             this.etiquetaAviso4.Location = new System.Drawing.Point(69, 304);
             this.etiquetaAviso4.Marca = Tema5PruebaNuevosComponentes.EMarca.Imagen;
             this.etiquetaAviso4.Name = "etiquetaAviso4";
@@ -90,6 +115,7 @@
             // etiquetaAviso3
             // 
             this.etiquetaAviso3.Gradiente = false;
+            this.etiquetaAviso3.ImagenMarca = null;
             this.etiquetaAviso3.Location = new System.Drawing.Point(69, 317);
             this.etiquetaAviso3.Marca = Tema5PruebaNuevosComponentes.EMarca.Imagen;
             this.etiquetaAviso3.Name = "etiquetaAviso3";
@@ -99,6 +125,7 @@
             // etiquetaAviso2
             // 
             this.etiquetaAviso2.Gradiente = true;
+            this.etiquetaAviso2.ImagenMarca = null;
             this.etiquetaAviso2.Location = new System.Drawing.Point(45, 260);
             this.etiquetaAviso2.Marca = Tema5PruebaNuevosComponentes.EMarca.Cruz;
             this.etiquetaAviso2.Name = "etiquetaAviso2";
@@ -109,6 +136,7 @@
             // etiquetaAviso1
             // 
             this.etiquetaAviso1.Gradiente = false;
+            this.etiquetaAviso1.ImagenMarca = null;
             this.etiquetaAviso1.Location = new System.Drawing.Point(28, 135);
             this.etiquetaAviso1.Marca = Tema5PruebaNuevosComponentes.EMarca.Cruz;
             this.etiquetaAviso1.Name = "etiquetaAviso1";
@@ -134,21 +162,12 @@
             this.labelTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.labelTextBox1_KeyPress);
             this.labelTextBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.labelTextBox1_KeyUp);
             // 
-            // etiquetaAviso5
-            // 
-            this.etiquetaAviso5.Gradiente = false;
-            this.etiquetaAviso5.Location = new System.Drawing.Point(136, 331);
-            this.etiquetaAviso5.Marca = Tema5PruebaNuevosComponentes.EMarca.Imagen;
-            this.etiquetaAviso5.Name = "etiquetaAviso5";
-            this.etiquetaAviso5.Size = new System.Drawing.Size(78, 13);
-            this.etiquetaAviso5.TabIndex = 9;
-            this.etiquetaAviso5.Text = "etiquetaAviso5";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.etiquetaAviso6);
             this.Controls.Add(this.etiquetaAviso5);
             this.Controls.Add(this.etiquetaAviso4);
             this.Controls.Add(this.etiquetaAviso3);
@@ -159,6 +178,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.labelTextBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Practica guiada Dibujo GDI y clase Control";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
@@ -179,6 +199,7 @@
         private Tema5PruebaNuevosComponentes.EtiquetaAviso etiquetaAviso3;
         private Tema5PruebaNuevosComponentes.EtiquetaAviso etiquetaAviso4;
         private Tema5PruebaNuevosComponentes.EtiquetaAviso etiquetaAviso5;
+        private Tema5PruebaNuevosComponentes.EtiquetaAviso etiquetaAviso6;
     }
 }
 
