@@ -10,6 +10,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tema5PruebaNuevosComponentes;
 
+
+//TODO pendiente de valdiar el ejercicio 2
+
+
 namespace FormPruebaComponentes
 {
 
@@ -97,9 +101,6 @@ namespace FormPruebaComponentes
 
         
 
-        private void etiquetaAviso6_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
+       
     }
 }

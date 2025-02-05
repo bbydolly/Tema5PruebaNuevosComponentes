@@ -202,7 +202,7 @@ namespace Tema5PruebaNuevosComponentes
 
 
         //Declaración del evento
-        [Category("Mis eventos")]
+         [Category("Mis eventos")]
         [Description("Se lanza cuando se realiza click sobre la marca")]
         public event EventHandler ClickEnMarca;
 
