@@ -343,28 +343,39 @@ namespace Tema5PruebaNuevosComponentes
             set
             {
                 subrayada = value;
-                // dibujarSubrayado();
+                //TODO no funciona bien???
+                this.Refresh();
             }
             get
             {
                 return subrayada;
             }
+           
         }
+
+        //TODO CURRO REVISAR
 
         //La clase userControl no pone por defecto el OnPaint pero se lo añado 
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
             Graphics g = e.Graphics;
-
+            recolocar();
             if (Subrayada)
             {
-
+                Pen lapiz;
                 //Esta propiedad provoca mejoras en la apariencia o en la eficiencia
                 // a la hora de dibujar
                 g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-              
-                Pen lapiz = new Pen(Color.Red, 1);
+                if (Posicion == EPosicion.IZQUIERDA)
+                {
+
+                 lapiz = new Pen(Color.Red, 1);
+                } else
+                {
+                    lapiz = new Pen(Color.Blue, 1);
+
+                }
                 //Cordenadas punto de origen y punto final 
                 //  g.DrawLine(lapiz, lbl.Location.X, lbl.Location.Y    +    lbl.Height+5, lbl.Location.X + lbl.Height + 5, lbl.Width);
                 g.DrawLine(lapiz, lbl.Location.X, lbl.Location.Y + lbl.Height + 5,

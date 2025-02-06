@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Tema5PruebaNuevosComponentes
+namespace Tema5PruebaNuevosComponentes//Revisar Refresh. Colores ini y fin gradiente.  ClickEnMarca (probarlo)
 {
     //Etiqueta Aviso
 
@@ -83,6 +83,61 @@ namespace Tema5PruebaNuevosComponentes
         }
 
 
+        //Propiedad colores para el gradiente
+        private Color color1;
+        [Category("Appearence")]
+        [Description("Establece el color desde el cual se va a generar el inicio del gradiente.")]
+
+        public Color Color1
+        {
+            get
+            {
+                return color1;
+
+            }
+            set
+            {
+                
+
+                if (value != null)
+                {
+                    color1 = value;
+                }
+                else
+                {
+                    color1 = Color.AliceBlue;
+                }
+                this.Refresh();
+            }
+        }
+
+        private Color color2;
+        [Category("Appearence")]
+        [Description("Establece el color del gradiente del final.")]
+
+        public Color Color2
+        {
+            get
+            {
+                return color2;
+            }
+            set 
+            {
+                if (value != null)
+                {
+                    color2 = value;
+                }
+                else
+                {
+                    color2 = Color.Red;
+                }
+                this.Refresh();
+            }
+        }
+
+
+
+
 
         //Ej 2 fondo opcional gradiente entre dos colores
         //Defino la propiedad 
@@ -94,6 +149,7 @@ namespace Tema5PruebaNuevosComponentes
             set
             {
                 gradiente = value;
+                this.Refresh();
             }
             get
             {
@@ -135,7 +191,7 @@ namespace Tema5PruebaNuevosComponentes
                 //ancho y alto de la propia etiqueta
                 Rectangle r = new Rectangle(0, 0, this.Width, this.Height);
                 //2. Usar LinearGradientBrush para pintar el gradiente
-                Brush brush = new LinearGradientBrush(r, Color.AliceBlue, Color.Red, 1);
+                Brush brush = new LinearGradientBrush(r, color1, color2, 1);
                 g.FillRectangle(brush, r);
             }
 
@@ -202,7 +258,7 @@ namespace Tema5PruebaNuevosComponentes
 
 
         //Declaración del evento
-         [Category("Mis eventos")]
+        [Category("Mis eventos")]
         [Description("Se lanza cuando se realiza click sobre la marca")]
         public event EventHandler ClickEnMarca;
 
@@ -211,7 +267,7 @@ namespace Tema5PruebaNuevosComponentes
         public void OnClickEnMarca(EventArgs e)//Void con parámetro eventArgs
         {
             ClickEnMarca?.Invoke(this, e);//e
-            
+
         }
 
 
@@ -223,9 +279,10 @@ namespace Tema5PruebaNuevosComponentes
             if (e.Location.X <= anchoX)
             {
                 OnClickEnMarca(EventArgs.Empty);
+                Debug.WriteLine("Click en marca");
 
             }
-           
+
         }
 
 

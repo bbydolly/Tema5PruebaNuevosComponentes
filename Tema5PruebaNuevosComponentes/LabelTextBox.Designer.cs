@@ -35,6 +35,7 @@
             // lbl
             // 
             this.lbl.AutoSize = true;
+            this.lbl.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lbl.Location = new System.Drawing.Point(53, 46);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(35, 13);
@@ -61,7 +62,6 @@
             this.Name = "LabelTextBox";
             this.Size = new System.Drawing.Size(293, 113);
             this.SizeChanged += new System.EventHandler(this.LabelTextBox_SizeChanged);
-          
             this.ResumeLayout(false);
             this.PerformLayout();
 

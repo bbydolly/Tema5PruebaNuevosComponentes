@@ -82,17 +82,22 @@
             // 
             // etiquetaAviso6
             // 
-            this.etiquetaAviso6.Gradiente = false;
-            this.etiquetaAviso6.ImagenMarca = null;
+            this.etiquetaAviso6.Color1 = System.Drawing.Color.Yellow;
+            this.etiquetaAviso6.Color2 = System.Drawing.Color.SteelBlue;
+            this.etiquetaAviso6.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.etiquetaAviso6.Gradiente = true;
+            this.etiquetaAviso6.ImagenMarca = global::FormPruebaComponentes.Properties.Resources.bunny_Sheet;
             this.etiquetaAviso6.Location = new System.Drawing.Point(45, 338);
-            this.etiquetaAviso6.Marca = Tema5PruebaNuevosComponentes.EMarca.Circulo;
+            this.etiquetaAviso6.Marca = Tema5PruebaNuevosComponentes.EMarca.Imagen;
             this.etiquetaAviso6.Name = "etiquetaAviso6";
-            this.etiquetaAviso6.Size = new System.Drawing.Size(131, 53);
+            this.etiquetaAviso6.Size = new System.Drawing.Size(395, 60);
             this.etiquetaAviso6.TabIndex = 10;
             this.etiquetaAviso6.Text = "etiquetaAviso6";
             // 
             // etiquetaAviso5
             // 
+            this.etiquetaAviso5.Color1 = System.Drawing.Color.Empty;
+            this.etiquetaAviso5.Color2 = System.Drawing.Color.Empty;
             this.etiquetaAviso5.Gradiente = false;
             this.etiquetaAviso5.ImagenMarca = ((System.Drawing.Bitmap)(resources.GetObject("etiquetaAviso5.ImagenMarca")));
             this.etiquetaAviso5.Location = new System.Drawing.Point(45, 304);
@@ -104,6 +109,8 @@
             // 
             // etiquetaAviso4
             // 
+            this.etiquetaAviso4.Color1 = System.Drawing.Color.Empty;
+            this.etiquetaAviso4.Color2 = System.Drawing.Color.Empty;
             this.etiquetaAviso4.Gradiente = false;
             this.etiquetaAviso4.ImagenMarca = null;
             this.etiquetaAviso4.Location = new System.Drawing.Point(69, 304);
@@ -114,6 +121,8 @@
             // 
             // etiquetaAviso3
             // 
+            this.etiquetaAviso3.Color1 = System.Drawing.Color.Empty;
+            this.etiquetaAviso3.Color2 = System.Drawing.Color.Empty;
             this.etiquetaAviso3.Gradiente = false;
             this.etiquetaAviso3.ImagenMarca = null;
             this.etiquetaAviso3.Location = new System.Drawing.Point(69, 317);
@@ -124,6 +133,8 @@
             // 
             // etiquetaAviso2
             // 
+            this.etiquetaAviso2.Color1 = System.Drawing.Color.Empty;
+            this.etiquetaAviso2.Color2 = System.Drawing.Color.Empty;
             this.etiquetaAviso2.Gradiente = true;
             this.etiquetaAviso2.ImagenMarca = null;
             this.etiquetaAviso2.Location = new System.Drawing.Point(45, 260);
@@ -135,6 +146,8 @@
             // 
             // etiquetaAviso1
             // 
+            this.etiquetaAviso1.Color1 = System.Drawing.Color.Empty;
+            this.etiquetaAviso1.Color2 = System.Drawing.Color.Empty;
             this.etiquetaAviso1.Gradiente = false;
             this.etiquetaAviso1.ImagenMarca = null;
             this.etiquetaAviso1.Location = new System.Drawing.Point(28, 135);
@@ -146,6 +159,7 @@
             // 
             // labelTextBox1
             // 
+            this.labelTextBox1.AllowDrop = true;
             this.labelTextBox1.Location = new System.Drawing.Point(28, 41);
             this.labelTextBox1.Name = "labelTextBox1";
             this.labelTextBox1.Posicion = Tema5PruebaNuevosComponentes.LabelTextBox.EPosicion.IZQUIERDA;
